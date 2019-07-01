@@ -4,6 +4,19 @@ hh_simple_downloadcounter is a TYPO3 extension.
 ### Installation
 ... like any other TYPO3 extension for example: [extensions.typo3.org](https://extensions.typo3.org/extension/hh_video/ "TYPO3 Extension Repository")
 
+### Usage
+Send an POST ajax-call to "?eID=count_downloads&file=PATH_TO_YOUR_FILE"
+Example:
+´io.elementsEach(".count-downloads li a", function(el) {
+    // el.setAttribute("download", "");
+    el.addEventListener("click", function(e) {
+        // e.preventDefault();
+        var url = el.getAttribute("href");
+        $.post("http://"+window.location.hostname+"?eID=count_downloads&file="+url, function(data) {
+        });
+    })
+});´
+
 ### Features
 
 ### Todos
