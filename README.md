@@ -1,5 +1,6 @@
 # hh_simple_downloadcounter
 hh_simple_downloadcounter is a TYPO3 extension.
+This Extension provides a eID Script to safe and update clicks on file-links (counts) and it provides a backend module which shows all files and there click-count.
 
 ### Installation
 ... like any other TYPO3 extension for example: [extensions.typo3.org](https://extensions.typo3.org/extension/hh_video/ "TYPO3 Extension Repository")
