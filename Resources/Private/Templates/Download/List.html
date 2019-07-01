@@ -1,0 +1,50 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:be="http://typo3.org/ns/TYPO3/CMS/Backend/ViewHelpers"
+    xmlns:core="http://typo3.org/ns/TYPO3/CMS/Core/ViewHelpers"
+    data-namespace-typo3-fluid="true">
+
+<f:layout name="Default"/>
+
+<f:section name="content">
+    <h1>Overview BE</h1>
+
+    <f:flashMessages />
+
+    <table class="table table-striped sortable">
+        <thead>
+            <tr>
+                <th>Ziel des Links/Download</th>
+                <th>File Title</th>
+                <th>File Path</th>
+                <th>Anzahl Klicks/Downloads</th>
+                <f:comment><th>Info</th></f:comment>
+            </tr>
+        </thead>
+        <tbody>
+            <f:for each="{downloads}" as="download" iteration="index">
+                <tr>
+                    <td>
+                        <be:link.editRecord uid="{download.uid}" table="sys_file_metadata">
+                            {download.name}
+                        </be:link.editRecord>
+                    </td>
+                    <td>
+                        <be:link.editRecord uid="{download.uid}" table="sys_file_metadata">
+                            {download.properties.title}
+                        </be:link.editRecord>
+                    </td>
+                    <td>
+                        {download.properties.identifier}
+                    </td>
+                    <td class="count">
+                        {download.properties.download_count}
+                        <span class="reset"><f:link.action action="reset" arguments="{uid: download.uid}">Reset</f:link.action></span>
+                    </td>
+                    <f:comment><td><f:link.action action="show" arguments="{download: download}">Details</f:link.action></td></f:comment>
+                </tr>
+            </f:for>
+        </tbody>
+    </table>
+</f:section>
+
+</html>

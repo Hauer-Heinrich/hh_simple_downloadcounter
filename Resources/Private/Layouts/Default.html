@@ -1,0 +1,31 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:be="http://typo3.org/ns/TYPO3/CMS/Backend/ViewHelpers"
+    xmlns:core="http://typo3.org/ns/TYPO3/CMS/Core/ViewHelpers"
+    data-namespace-typo3-fluid="true">
+
+<f:be.container pageTitle="Download counter"
+    includeRequireJsModules=""
+    includeCssFiles="{
+        0: '{f:uri.resource(path:\'Css/sortable.min.css\')}'
+    }"
+    includeJsFiles="{
+        0: '{f:uri.resource(path:\'JavaScript/sortable.min.js\')}',
+        1: '{f:uri.resource(path:\'JavaScript/sortable.config.js\')}'
+    }">
+    <div class="module" id="download-list" data-module-id data-module-name>
+        <div class="module-loading-indicator"></div>
+        <div class="module-docheader t3js-module-docheader">
+            <div class="module-docheader-bar module-docheader-bar-navigation t3js-module-docheader-bar-navigation"></div>
+            <div class="module-docheader-bar module-docheader-bar-buttons t3js-module-docheader-bar t3js-module-docheader-bar-buttons">
+                <div class="module-docheader-bar-column-left"></div>
+                <div class="module-docheader-bar-column-right"></div>
+            </div>
+        </div>
+        <div class="module-body t3js-module-body" style="padding-top: 89px;">
+            <f:flashMessages />
+            <f:render section="content" />
+        </div>
+    </div>
+</f:be.container>
+
+</html>

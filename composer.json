@@ -1,0 +1,30 @@
+{
+    "name": "hauerheinrich/hh_simple_downloadcounter",
+    "type": "typo3-cms-extension",
+    "description": "",
+    "authors": [
+        {
+            "name": "Christian Hackl",
+            "email": "web@hauer-heinrich.de"
+        }
+    ],
+    "license": "GPL-3.0",
+    "keywords": ["TYPO3 CMS", "counter", "download"],
+    "replace": {
+        "demoext": "self.version",
+        "typo3-ter/hh_simple_downloadcounter": "self.version"
+    },
+    "require": {
+        "typo3/cms-core": "^9.5.0 || ^9.9.99"
+    },
+    "autoload": {
+        "psr-4": {
+            "HauerHeinrich\\HhSimpleDownloadcounter\\": "Classes"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "hh_simple_downloadcounter"
+        }
+    }
+}
