@@ -7,7 +7,8 @@ hh_simple_downloadcounter is a TYPO3 extension.
 ### Usage
 Send an POST ajax-call to "?eID=count_downloads&file=PATH_TO_YOUR_FILE"
 Example:
-´io.elementsEach(".count-downloads li a", function(el) {
+```javascript
+io.elementsEach(".count-downloads li a", function(el) {
     // el.setAttribute("download", "");
     el.addEventListener("click", function(e) {
         // e.preventDefault();
@@ -15,7 +16,8 @@ Example:
         $.post("http://"+window.location.hostname+"?eID=count_downloads&file="+url, function(data) {
         });
     })
-});´
+});
+```
 
 ### Features
 
