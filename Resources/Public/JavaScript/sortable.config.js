@@ -1,3 +1,4 @@
+// BACKEND
 // Chrome's NodeList forEach Implementation
 if(window.NodeList && !NodeList.prototype.forEach){
     NodeList.prototype.forEach = Array.prototype.forEach;
@@ -24,3 +25,31 @@ document.addEventListener("DOMContentLoaded", function(e) {
     });
 
 });
+
+// FRONEND e.g.:
+// Download count eidApi - file download count (ce-uploads)
+// io.elementsEach(".count-downloads li a", function(el) {
+//     el.setAttribute("download", "");
+//     el.addEventListener("click", function(e) {
+//         // e.preventDefault();
+//         var url = el.getAttribute("href");
+//         $.post("http://"+window.location.hostname+"?eID=count_downloads&file="+url, function(data) {
+//         });
+//     })
+// });
+
+
+// PageTS:
+// TCEFORM {
+//     tt_content {
+//         layout {
+//             types {
+//                 uploads {
+//                     addItems {
+//                         count-downloads = Count Downloads
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
